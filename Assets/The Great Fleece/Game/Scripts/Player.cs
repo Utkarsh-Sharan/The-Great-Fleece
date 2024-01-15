@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 
     private Vector3 _target;
     private bool _hasTossedCoin;
+    private float _maxDistance = 50.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -51,11 +52,13 @@ public class Player : MonoBehaviour
             RaycastHit hitInfo;
             Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(rayOrigin, out hitInfo))
+            if (Physics.Raycast(rayOrigin, out hitInfo, _maxDistance, ~(1<<6)))
             {
+                //Debug.Log(hitInfo.collider.gameObject.name + " is hit.");
+
                 _anim.SetTrigger("Throw");
                 _hasTossedCoin = true;
-                Instantiate(_coinPrefab, hitInfo.point + new Vector3(0, -1.3f, 0), Quaternion.identity);
+                Instantiate(_coinPrefab, hitInfo.point, Quaternion.identity);
                 AudioSource.PlayClipAtPoint(_coinSoundEffect, hitInfo.point);
 
                 SendAIToCoinSpot(hitInfo.point);
