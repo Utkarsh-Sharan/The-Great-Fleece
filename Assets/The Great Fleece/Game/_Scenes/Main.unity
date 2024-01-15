@@ -42501,7 +42501,7 @@ GameObject:
   - component: {fileID: 1063627895}
   - component: {fileID: 1063627898}
   - component: {fileID: 1063627899}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57890,7 +57890,7 @@ GameObject:
   - component: {fileID: 1572422757}
   - component: {fileID: 1572422760}
   - component: {fileID: 1572422761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65610,7 +65610,7 @@ GameObject:
   - component: {fileID: 1982945577}
   - component: {fileID: 1982945580}
   - component: {fileID: 1982945581}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
